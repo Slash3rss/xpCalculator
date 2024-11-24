@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Minecraft XP Calculator - Calculate the required XP to reach the selected level in Minecraft game. An easy and fast tool for players!">
+    <meta name="keywords"
+        content="Minecraft, XP, Kalkulator, Poziomy, Minecraft XP Calculator, Narzędzie Minecraft, Obliczenia XP, Minecraft Leveling">
+    <meta name="author" content="Slash3rss">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#4CAF50">
+    <meta property="og:title" content="Minecraft XP Calculator">
+    <meta property="og:description" content="Calculate the required XP to reach the selected level in Minecraft game.">
+    <meta property="og:image" content="https://slash3rss.dev/xp/img/xp.png">
+    <meta property="og:url" content="https://slash3rss.dev/xp">
+    <meta property="og:type" content="website">
+    <title>Slash3rss.dev - Minecraft XP Calculator</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+    <link id="favicon" rel="icon" href="./favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <div class="main">
+        <div class="container">
+            <img src="./img/xp.png" class="logo" />
+            <h1>Minecraft XP Calculator</h1>
+            <form id="xpCalculator">
+                <label for="startLevel">Enter initial level:</label><br>
+                <input type="number" id="startLevel" min="0" value="0" required oninput="calculateXP()"><br>
+                <label for="endLevel">Enter target level:</label><br>
+                <input type="number" id="endLevel" min="1" required placeholder="999" oninput="calculateXP()"><br>
+                <label for="displayActions">Display Actions:</label>
+                <input type="checkbox" id="displayActions" onchange="calculateXP()">
+            </form>
+            <div class="result" id="result"></div>
+        </div>
+        <div class="actions hidden" id="actions">
+            <h2>Actions to Earn XP</h2>
+            <ul class="xpActions" id="xpActions"></ul>
+        </div>
+    </div>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
