@@ -26,8 +26,9 @@ document.addEventListener('DOMContentLoaded', () => {
         if (document.hidden) {
             let isOriginal = true;
             blinkInterval = setInterval(() => {
+                let favicon = document.getElementById("favicon");
                 document.title = isOriginal ? "Come back to me! 😢" : "I miss you! 🥺";
-                document.getElementById("favicon").href = isOriginal ? "./img/sad_steve.png" : "./img/sad_steve2.png";
+                favicon.href = isOriginal ? "./img/sad_steve.png" + '?v=' + new Date().getTime() : "./img/sad_steve2.png" + '?v=' + new Date().getTime();
                 isOriginal = !isOriginal;
             }, 2000);
         } else {
