@@ -29,18 +29,15 @@
             <h1>Minecraft XP Calculator</h1>
             <form id="xpCalculator">
                 <label for="startLevel">Enter initial level:</label><br>
-                <input type="number" id="startLevel" min="0" value="0" required oninput="calculateXP()"><br>
+                <input type="number" id="startLevel" min="0" value="0" required><br>
                 <label for="endLevel">Enter target level:</label><br>
-                <input type="number" id="endLevel" min="1" required placeholder="999" oninput="calculateXP()"><br>
-                <label for="displayActions">Display Actions:</label>
-                <input type="checkbox" id="displayActions" onchange="calculateXP()">
+                <input type="number" id="endLevel" min="1" required placeholder="999"><br>
             </form>
-            <div class="result" id="result"></div>
+            <div class="result hidden" id="result"></div>
         </div>
-        <div class="actions hidden" id="actions">
-            <h2>Actions to Earn XP</h2>
-            <ul class="xpActions" id="xpActions"></ul>
-        </div>
+    </div>
+    <div class="footer">
+        <span class="footerText">Copyright &copy 2024 Slash3rss.dev</span>
     </div>
     <script src="./js/script.js"></script>
 </body>
